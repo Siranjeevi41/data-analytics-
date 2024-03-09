@@ -1,0 +1,17 @@
+Recurrent Neural Networks (RNNs):
+    * RNNs are a class of neural networks specifically designed to work with sequential data, where the order of elements matters. They have connections that form directed cycles, allowing them to exhibit dynamic temporal behavior.
+    * Each neuron in an RNN receives input not only from the current time step but also from the previous time step, creating a feedback loop. This allows RNNs to maintain a memory of past inputs, making them suitable for tasks such as time series prediction, natural language processing, and speech recognition.
+    * However, traditional RNNs suffer from the vanishing gradient problem, where gradients diminish exponentially as they propagate back through time, limiting their ability to capture long-range dependencies in sequences.
+
+Long Short-Term Memory (LSTM):
+    * LSTMs are a type of RNN architecture designed to address the vanishing gradient problem and better capture long-range dependencies in sequential data.
+    * LSTMs introduce a memory cell that can store information over long periods of time and selectively control the flow of information through gates: forget gate, input gate, and output gate.
+    * The forget gate determines which information to discard from the memory cell, the input gate decides which new information to store in the memory cell, and the output gate controls the information flow from the memory cell to the output.
+    * By explicitly maintaining a memory cell and using gates to regulate information flow, LSTMs can effectively learn and remember patterns in sequential data over extended time periods.
+
+Gated Recurrent Unit (GRU):
+    * GRUs are another variant of RNNs that aim to address the vanishing gradient problem and improve training efficiency compared to LSTMs.
+    * GRUs combine the memory cell and gates into a single update gate and a reset gate, reducing the number of parameters and simplifying the architecture compared to LSTMs.
+    * The reset gate controls how much past information to forget, while the update gate determines how much of the new candidate information to incorporate into the memory cell.
+    * GRUs have been shown to achieve comparable performance to LSTMs on many sequential data tasks while being computationally more efficient and easier to train.
+
